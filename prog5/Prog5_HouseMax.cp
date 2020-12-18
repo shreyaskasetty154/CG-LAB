@@ -13,7 +13,7 @@ float m, c, theta;
 void display()
 {
 	glClearColor(1, 1, 1, 0);
-	glClear(GL_COLOR_BUFFER_BIT | GL_DEPTH_BUFFER_BIT);
+	glClear(GL_COLOR_BUFFER_BIT);
 	glMatrixMode(GL_PROJECTION);
 	glLoadIdentity();
 	gluOrtho2D(-450, 450, -450, 450);
@@ -31,7 +31,7 @@ void display()
 	glTranslatef(100, 100, 0);
 	glRotatef(angle, 0, 0, 1);
 	glTranslatef(-100, -100, 0);
-	glColor3f(1, 1, 0);
+	glColor3f(0, 0, 1);
 	glBegin(GL_LINE_LOOP);
 	for (int i = 0; i < 11; i++)
 		glVertex2fv(house[i]);
@@ -42,7 +42,7 @@ void display()
 void display2()
 {
 	glClearColor(1, 1, 1, 0);
-	glClear(GL_COLOR_BUFFER_BIT | GL_DEPTH_BUFFER_BIT);
+	glClear(GL_COLOR_BUFFER_BIT);
 	glMatrixMode(GL_PROJECTION);
 	glLoadIdentity();
 	gluOrtho2D(-450, 450, -450, 450);
@@ -59,7 +59,7 @@ void display2()
 	float x1 = 0, x2 = 500;
 	float y1 = m * x1 + c;
 	float y2 = m * x2 + c;
-	glColor3f(1, 1, 0);
+	glColor3f(0, 0, 1);
 	glBegin(GL_LINES);
 	glVertex2f(x1, y1);
 	glVertex2f(x2, y2);
